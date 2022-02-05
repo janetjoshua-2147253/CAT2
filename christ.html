@@ -1,35 +1,49 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
 <title>STUDENT LIST</title>
 <style>
 #id
 {color:white;
-border:2px;
+border:5px;
 border-color:white;
 
 text-align:left;
-
+position:relative;
+cellpadding:5px;
+}
+td
+{background:black;
 font-size:30px;
 }
-body
-{background:linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);;
+th
+{background:black;
+font-size:25px;
+
 }
-.gradient-button {background-image: linear-gradient(to right, #348AC7 0%, #7474BF 100%); width:200px;height:70px; color:white; font-size:20px;border:none;}
+
+video{object-fit:cover; width:100vw; height:100vh; position:fixed; opacity:0.5; left:0; top:0; }
+.gradient-button {position:relative;background-image: linear-gradient(to right, #348AC7 0%, #7474BF 100%); width:200px;height:70px; color:white; font-size:20px;border:none;}
 .gradient-button:hover {background-image: linear-gradient(to right, #7474BF 0%, #348AC7 100%);width:200px;height:70px; color:white; font-size:25px;border:none;}
 </style>
 <script src="christ.js"></script>
 </head>
 <body >
-   
-
+ 
+<video autoplay muted loop id="bgvid">
+  <source src="https://christuniversity.in/uploads/banners/770563177_2020-09-08_12-07-39.mp4" type="video/mp4">
+ </video>
  <center>
+ <div>
+  <button class="gradient-button" onclick="display()">SHOW LIST</button> 
+
   
   
-   <button class="gradient-button" onclick="display()">SHOW LIST</button>
+   
   <br><br>
+   
 		<table id="id" class="table" border="1"></table>
 		</center>
+		</div>
 
  </body>
 </html> 
