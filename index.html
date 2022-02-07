@@ -146,37 +146,37 @@ function isNumberKey(evt)
        const regex2= /^([a-z0-9\.-]+)@([a-z0-9]+)\.(christuniversity)(.in)$/;
 	          if (!regex1.test(email.value)&&!regex2.test(email.value))
 	   {c=1;
-	   span[0].innerText=" : Invalid Email Id";
-           span[0].style.color="red";
+	   span[3].innerText=" : Invalid Email Id";
+           span[3].style.color="red";
 	   //document.getElementById('typeEmailX').innerHTML="<span style='color: red;'>Invalid Email</span>";
            //alert("Invalid Email ID Format");
        }
 	   if (regex1.test(email.value)||regex2.test(email.value))
-	   {span[0].innerText=" : Valid Email Id";
-           span[0].style.color="green"; 
+	   {span[3].innerText=" : Valid Email Id";
+           span[3].style.color="green"; 
 		   }
        if (!regnum.test(number.value)||number.value=='')
 	   {c=1;
-            span[1].innerText="   : Invalid Phone Number";
-           span[1].style.color="red";
+            span[2].innerText="   : Invalid Phone Number";
+           span[2].style.color="red";
        } 
 
 if (regnum.test(number.value))
 	   {
-            span[1].innerText="   : Valid Phone Number";
-           span[1].style.color="green";
+            span[2].innerText="   : Valid Phone Number";
+           span[2].style.color="green";
        } 	   
 	     if(username.value.trim().length<5)
            { c=1;
-               span[2].innerText="  : Very Short Username (5 letters min.)";
-           span[2].style.color="red";
+               span[0].innerText="  : Very Short Username (5 letters min.)";
+           span[0].style.color="red";
            }  
 		   
 		   
         if(username.value.trim()=="")
            { c=1;
-               span[2].innerText="  : Enter Username";
-           span[2].style.color="red";
+               span[0].innerText="  : Enter Username";
+           span[0].style.color="red";
                
            }  
 		   if(username.value.trim().length>4)
@@ -184,20 +184,20 @@ if (regnum.test(number.value))
 		   x.innerHTML = username.value[0].toUpperCase() + 
             username.value.slice(1);
 		   
-		   span[2].innerText="  : Valid Username";
-           span[2].style.color="green";}
+		   span[0].innerText="  : Valid Username";
+           span[0].style.color="green";}
 		   
  if(password.value.trim()=="")
            {c=1;
-               span[3].innerText="  : Enter Password";
-           span[3].style.color="red";
+               span[4].innerText="  : Enter Password";
+           span[4].style.color="red";
                
            }
            if(password.value.trim().length<8)
            {c=1;
                
-               span[3].innerText="  : Password Too Short";
-           span[3].style.color="red";
+               span[4].innerText="  : Password Too Short";
+           span[4].style.color="red";
            }
 if (!pwd.test(password.value))
 {
