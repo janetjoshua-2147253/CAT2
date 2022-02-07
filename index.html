@@ -171,7 +171,12 @@ if (regnum.test(number.value))
                span[0].innerText="  : Very Short Username (5 letters min.)";
            span[0].style.color="red";
            }  
-		   
+	 if(age.value<15 && age.value>25)
+           { c=1;
+               span[1].innerText="Age is invalid (15-25)";
+           span[1].style.color="red";
+               
+           }  	   
 		   
         if(username.value.trim()=="")
            { c=1;
@@ -202,19 +207,27 @@ if (regnum.test(number.value))
 if (!pwd.test(password.value))
 {
 c=1;
-               span[3].innerText=": Wrong Format  atleast 1 Upper case; Atleast 1 lower case; 1 spl. char; 1 digit; ";
-           span[3].style.color="red";
+               span[4].innerText=": Wrong Format  atleast 1 Upper case; Atleast 1 lower case; 1 spl. char; 1 digit; ";
+           span[4].style.color="red";
 }		   
 if (pwd.test(password.value))
-{ span[3].innerText="  : Password Is Strong";
-           span[3].style.color="green";
+{ span[4].innerText="  : Password Is Strong";
+           span[4].style.color="green";
 		   }
        if (c==0)
 	   {
 	   document.cookie="username="+username.value+";expires=Wed,9 Feb 2022 01:00:00 UTC; path=/;";
  document.cookie="email="+email.value+";expires=Wed,9 Feb 2022 01:00:00 UTC; path=/;";
-	   alert("Login Successful!");
-	   window.location.href="christ.html";
+		   if(document.cookie.length!=0)
+           {   
+		 alert("Name and Email ID saved as cookies...."+document.cookie);
+			   window.location.href="christ.html";
+           }
+           else{
+               alert("No cookies saved... login successful");
+			   window.location.href="christ.html";
+           }
+	   
 	   
 	   
 	   }
