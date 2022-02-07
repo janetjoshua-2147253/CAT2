@@ -205,6 +205,12 @@ if (regnum.test(number.value))
            span[4].style.color="red";
                
            }
+	    if(age.value.trim()=="")
+           {c=1;
+               span[1].innerText="  : Enter Age";
+           span[1].style.color="red";
+               
+           }
            if(password.value.trim().length<8)
            {c=1;
                
